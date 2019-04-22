@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Confirm?</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+      <ion-card-content style="text-align: center" >
+         <h1>All good?</h1>
+         
+         <img  class="photoimage" style="max-width: 40%;" [src]="image"/>
+         <!-- <img *ngIf="defaultimage" class="photoimage" style="max-width: 20%;" src="../../assets/default.png"/> -->
+         
+            <br>
+        <h1><b>Name:</b> {{this.visitor_name}}</h1>
+        <h1><b>Host:</b> {{this.host_name}}</h1>
+        <!-- <ion-input (change)="onFileChange($event)" type="file" id="fileUpload"></ion-input> -->
+        <br><br>
+        
+          <ion-button (click)="visitorCompleteSignIn()" style="width:90%;"  >All Good</ion-button>
+        </ion-card-content>
+  </ion-card>
+  <div *ngFor="let item of this.printerData">{{item.modelName}} {{item.macAddress}} {{item.nodeName}} {{item.model}} {{item.ipAddress}} {{item.location}} {{item.paperLabelName}} {{item.port}} zz</div>
+  <div>{{this.printstatus}}</div>
+<div *ngIf="submitted" id="overlay_loading">
+  Thank you, we are signing you in. Please standby.
+  <div id="gifspinner" class="preloader-wrapper big active">
+       <div class="spinner-layer spinner-blue">
+       <div class="circle-clipper left">
+         <div class="circle"></div>
+       </div><div class="gap-patch">
+         <div class="circle"></div>
+       </div><div class="circle-clipper right">
+         <div class="circle"></div>
+       </div>
+     </div>
+  
+  </div>
+  </div>
+</ion-content>
+

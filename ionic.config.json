@@ -1,5 +1,8 @@
 {
   "name": "MyLobby_ionic_2",
-  "integrations": {},
-  "type": "angular"
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "fbd34998"
 }

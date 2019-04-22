@@ -1,12 +1,26 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      MyLobby
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+  <ion-card class="align-middle">
+      <ion-card-header>
+        
+        <ion-card-title>Welcome to MyLobby - Please Sign In</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+          <ion-input type="text" placeholder="Email"></ion-input>
+          
+          <ion-input type="password" placeholder="Password"></ion-input>
+          <br>
+          <ion-button style="width:90%;" (click)="signIn()">Sign In</ion-button>
+        </ion-card-content>
+        <p>Not a memeber? Sign up here</p>
+    </ion-card>
+
+        
 </ion-content>

@@ -1,0 +1,10 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Take Photo?</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<span style="text-align: center;"><ion-button (click)=takePhoto(); style="width:40%;" >Take Photo</ion-button><ion-button style="width:40%;" [routerLink]="['/confirm-visitor-signin']" >Skip</ion-button></span>
+<div *ngIf="showCounter" class="countDownTimer">{{counterDown}}</div>
+</ion-content>

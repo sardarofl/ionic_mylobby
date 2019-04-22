@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>MyLobby Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content padding>
+  <form [formGroup]="credentialsForm" (ngSubmit)="onSubmit()">
+ 
+    <ion-item>
+      <ion-label position="floating">Emails</ion-label>
+      <ion-input type="email" formControlName="email"></ion-input>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+ 
+    <ion-button expand="full" type="submit" [disabled]="!credentialsForm.valid">Login</ion-button>
+    <ion-button expand="full" type="button" (click)="register()" [disabled]="!credentialsForm.valid">Register</ion-button>
+ 
+  </form>
+
+  
+  <div *ngIf="submitted" id="overlay_loading">
+      
+      <div id="gifspinner" class="preloader-wrapper big active">
+           <div class="spinner-layer spinner-blue">
+           <div class="circle-clipper left">
+             <div class="circle"></div>
+           </div><div class="gap-patch">
+             <div class="circle"></div>
+           </div><div class="circle-clipper right">
+             <div class="circle"></div>
+           </div>
+         </div>
+      
+      </div>
+      </div>
+</ion-content>

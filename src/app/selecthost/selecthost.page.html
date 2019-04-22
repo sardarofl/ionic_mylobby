@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Who are you visiting?</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+            <ion-item>
+                    <ion-label position="floating" >Host Name</ion-label>
+                    <ion-input type="text"></ion-input>
+                  </ion-item> 
+
+  
+    <ion-card style="overflow-y:scroll; height:450px;">
+      <br>
+        <ion-list>
+            <ion-item *ngFor= "let item of this.employeelist" (click)="selectedHost(item.id, item.name)" >
+                <ion-thumbnail item-left>
+                    <img src="{{getAvatarURL(item.id)}}"/>
+                  </ion-thumbnail>
+                  <h2 item-left>
+                      &nbsp;{{item.name}}
+                  </h2>
+            </ion-item>
+            
+        
+          </ion-list>
+    </ion-card>
+   
+  
+</ion-content>

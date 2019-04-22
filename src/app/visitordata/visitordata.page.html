@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tell us about yourself</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card>
+
+        <ion-card-content style="text-align: center" >
+            <!-- <ion-input type="text" placeholder="Your name" ></ion-input> -->
+            <ion-item style="width:90%;" >
+                <ion-label position="floating">Your Name</ion-label>
+                <ion-input type="text"  [(ngModel)]="visitorname"></ion-input>
+              </ion-item> 
+              <br>
+            <ion-button (click)=visitordatastore(); style="width:90%;" [routerLink]="['/selecthost']" >Next</ion-button>
+          </ion-card-content>
+      
+      </ion-card>
+
+      <!-- <ion-button (click)=signout();>Sign out</ion-button> -->
+</ion-content>

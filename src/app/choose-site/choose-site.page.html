@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>choose-site</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>Single Selection</ion-list-header>
+  
+    <ion-item>
+      <ion-label>Select Site</ion-label>
+      <ion-select [(ngModel)] = "selectedSiteID" placeholder="Select One">
+        <ion-select-option *ngFor="let item of sideID_array" value="{{item.id}}">{{item.name}}</ion-select-option>
+       
+      </ion-select>
+    </ion-item>
+    <ion-button (click)=selectSite();>Next</ion-button>
+
+  </ion-list>
+  <ion-button (click)=signout();>Sign out</ion-button>
+    
+<div *ngIf="submitted" id="overlay_loading">
+  <div id="gifspinner" class="preloader-wrapper big active">
+       <div class="spinner-layer spinner-blue">
+       <div class="circle-clipper left">
+         <div class="circle"></div>
+       </div><div class="gap-patch">
+         <div class="circle"></div>
+       </div><div class="circle-clipper right">
+         <div class="circle"></div>
+       </div>
+     </div>
+  
+  </div>
+  </div>
+</ion-content>
